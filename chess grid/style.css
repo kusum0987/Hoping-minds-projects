@@ -1,0 +1,26 @@
+.chess-board{
+    border: 5px solid rgb(255,255,255);
+    width:800px;
+    display: grid;
+    grid-template-columns: 0fr 0fr 0fr 0fr 0fr 0fr 0fr ;
+    grid-template-rows: 0fr 0fr 0fr 0fr 0fr 0fr 0fr;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: black;
+    padding: 0;
+}
+.white{
+    background-color: white;
+    height: 100px;
+    width: 100px;
+}
+
+.black{
+    background-color:black;
+    height: 110px;
+    width: 110px;
+}
+
