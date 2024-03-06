@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: skyblue;
+        }
+        #card {
+            border: 1px solid black;
+            padding: 40px;
+            margin: 30px auto;
+            max-width: 400px;
+            ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Card</h1>
+
+    <div>
+        <label for="item"> Name of Items:</label>
+        <input type="text" id="itemInput">
+        <button onclick="addItem()">submit</button>
+    </div>
+
+    <div id="card"></div>
+
+    <button onclick="clearCard()">Clear Card</button>
+
+    <script>
+        function addItem() {
+            var itemInput = document.getElementById('itemInput');
+            var newItem = itemInput.value;
+
+            if (newItem.trim() !== "") {
+                var card = document.getElementById('card');
+                var cardItem = document.createElement('div');
+                cardItem.textContent = newItem;
+                card.appendChild(cardItem);
+
+                // Clear the input field after adding the item
+                itemInput.value = "";
+            }
+        }
+
+        function clearCard() {
+            var card = document.getElementById('card');
+            card.innerHTML = "";
+        }
+    </script>
+</body>
+</html>
